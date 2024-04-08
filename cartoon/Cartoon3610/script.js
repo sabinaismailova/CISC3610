@@ -1,10 +1,23 @@
 // JavaScript code for interacting with the canvas
 window.onload = function () {
+  const spriteSheetPath = "spritesheet.png";
+  const spriteWidth = 480; // Width of each sprite frame
+  const spriteHeight = 301; // Height of each sprite frame
+  const totalFrames = 100; // Total number of frames in the sprite sheet
+  let currentFrame = 0;
+  
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
 
+  const spriteCanvas = document.getElementById('spriteCanvas');
+  const spriteCtx = spriteCanvas.getContext('2d');
+
+  const spriteSheet = new Image();
+  spriteSheet.onload = startAnimation;
+  spriteSheet.src = spriteSheetPath;
+
   // Add your drawing code here
-  context.fillStyle = "#fbfbfb";
+  context.fillStyle = "#d68d9c";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   //ground
@@ -144,7 +157,7 @@ window.onload = function () {
   context.beginPath();
   context.moveTo(710, 183);
   context.bezierCurveTo(700, 210, 695, 410, 710, 450);
-  context.fillStyle = "white";
+  context.fillStyle = "#d68d9c";
   context.fill();
 
   context.beginPath();
@@ -620,4 +633,21 @@ window.onload = function () {
 
   // Stroke the path
   context.fill();
+
+  function drawFrame(frameIndex) {
+    spriteCtx.clearRect(0, 0, spriteCanvas.width, spriteCanvas.height);
+    const col = frameIndex % (spriteSheet.width / spriteWidth);
+    const row = Math.floor(frameIndex / (spriteSheet.width / spriteWidth));
+    spriteCtx.drawImage(spriteSheet, col * spriteWidth, row * spriteHeight, spriteWidth, spriteHeight, 540, 0, spriteWidth, spriteHeight);
+  }
+
+  function animate() {
+    drawFrame(currentFrame);
+    currentFrame = (currentFrame + 1) % totalFrames;
+    requestAnimationFrame(animate);
+  }
+
+  function startAnimation() {
+    animate();
+  }
 };

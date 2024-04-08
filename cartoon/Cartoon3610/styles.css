@@ -64,3 +64,15 @@ a:hover {
   font-size: 1.1em;
   color: #000000;
 }
+
+#drawingCanvasContainer {
+  position: relative;
+  width: max-content;
+  height: max-content;
+}
+
+#spriteCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
