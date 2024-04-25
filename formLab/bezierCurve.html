@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bézier Curve Drawing</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body style="display:flex; justify-content:center;">
+    <div style="margin-top: 96px; margin-left: 24px;">
+        <form id="bezierForm">
+            <label for="controlX1">Control Point 1 X:</label>
+            <input type="range" id="controlX1" name="controlX1" min="0" max="500" value="100">
+            <output for="controlX1" id="controlX1Value">100</output>
+            <br>
+            <label for="controlY1">Control Point 1 Y:</label>
+            <input type="range" id="controlY1" name="controlY1" min="0" max="500" value="50">
+            <output for="controlY1" id="controlY1Value">50</output>
+            <br>
+            <label for="controlX2">Control Point 2 X:</label>
+            <input type="range" id="controlX2" name="controlX2" min="0" max="500" value="300">
+            <output for="controlX2" id="controlX2Value">300</output>
+            <br>
+            <label for="controlY2">Control Point 2 Y:</label>
+            <input type="range" id="controlY2" name="controlY2" min="0" max="500" value="200">
+            <output for="controlY2" id="controlY2Value">200</output>
+            <br>
+        </form>
+        <canvas id="bezierCanvas" width="500" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

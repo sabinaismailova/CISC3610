@@ -1,0 +1,13 @@
+body {
+    background-image: url('frame.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+canvas {
+    border: 1px solid black;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.665);
+}
