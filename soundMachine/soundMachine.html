@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Machine</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body style="display:flex; justify-content:center;">
+    <div id="sound-box">
+        <div id="animation">
+            <img class="gif" id="bubble" src="bubble.gif">
+            <img class="gif" id="sparkle" src="sparkles.gif">
+            <img class="gif" id="cities" src="cities.gif">
+            <img class="gif" id="rains" src="rains.gif">
+            <img class="gif" id="bird" src="bird.gif">
+            <img class="gif" id="thunders" src="thunders.gif">
+        </div>
+        <div id="buttons">
+            <button class="button electric-blue bubbles" onclick="playAudio('bubbles', 'bubble')"></button>
+            <button class="button neon-pink sparkles" onclick="playAudio('sparkles', 'sparkle')"></button>
+            <button class="button lime-green city" onclick="playAudio('city', 'cities')"></button>
+            <button class="button radiant-purple rain" onclick="playAudio('rain', 'rains')"></button>
+            <button class="button fluorescent-orange birds" onclick="playAudio('birds', 'bird')"></button>
+            <button class="button bright-yellow thunder" onclick="playAudio('thunder', 'thunders')"></button>
+        </div>
+    </div>
+
+    <audio id="bubbles" preload="auto">
+        <source src="bubbles.wav" type="audio/wav">
+    </audio>
+    <audio id="sparkles" preload="auto">
+        <source src="sparkle.wav" type="audio/wav">
+    </audio>
+    <audio id="city" preload="auto">
+        <source src="city.wav" type="audio/wav">
+    </audio>
+    <audio id="rain" preload="auto">
+        <source src="rain.wav" type="audio/wav">
+    </audio>
+    <audio id="birds" preload="auto">
+        <source src="birds.wav" type="audio/wav">
+    </audio>
+    <audio id="thunder" preload="auto">
+        <source src="thunder.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
