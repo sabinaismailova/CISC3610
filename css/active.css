@@ -95,10 +95,17 @@ button {
 }
 
 .home-content {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 #heading {
   margin-left: 2%;
+}
+
+.subheading {
+  margin-left: -122px;
+  font-weight: bold;
+  font-size: 28px;
 }
